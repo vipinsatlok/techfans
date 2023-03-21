@@ -6,14 +6,13 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./layouts/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./tools/**/*.{js,ts,jsx,tsx}",
 
     // Or if using `src` directory:
     "./tools/**/*.{js,ts,jsx,tsx}",
   ],
-  plugins: [
-    require("flowbite/plugin")
-  ],
+  plugins: [require("flowbite/plugin")],
   theme: {
     extend: {},
   },
-}
+};

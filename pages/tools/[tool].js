@@ -3,21 +3,31 @@ import { useRouter } from "next/router";
 import { sidebarData, toolsData } from "@/data/toolsData";
 
 const Tool = ({ tool }) => {
+  const ToolComponent = toolsData.find(
+    (item) => item.slug === tool.slug
+  ).component;
+
   return (
-    <LayoutTools>
-      <tool.component />
+    <LayoutTools
+      title={tool.title}
+      description={tool.description}
+      sidebarData={sidebarData}
+    >
+      <ToolComponent />
     </LayoutTools>
   );
 };
 
 export async function getStaticProps({ params }) {
-  const tool = JSON.parse(JSON.stringify(toolsData)).find((item) => item.slug === params.tool);
+  const data = JSON.parse(JSON.stringify(toolsData));
+  const tool = data.find((item) => item.slug === params.tool);
   if (!tool) return { notFound: true };
   return { props: { tool } };
 }
 
 export async function getStaticPaths() {
-  const paths = JSON.parse(JSON.stringify(toolsData)).map((tool) => ({
+  const data = JSON.parse(JSON.stringify(toolsData));
+  const paths = data.map((tool) => ({
     params: { tool: tool.slug },
   }));
   return { paths, fallback: false };
