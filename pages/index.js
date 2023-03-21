@@ -1,10 +1,9 @@
-import { countText } from '@/utils/tools'
-import React from 'react'
+const { Sidebar } = require("flowbite-react")
 
 const index = () => {
 
   return (
-    <div>index</div>
+    <div>home</div>
   )
 }
 
