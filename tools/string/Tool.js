@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Tool = () => {
-  return (
-    <div>tool</div>
-  )
-}
+  return <div>Tool Vale</div>;
+};
 
-export default Tool
+export default Tool;
