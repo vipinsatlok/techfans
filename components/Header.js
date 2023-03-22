@@ -28,13 +28,12 @@ const Header = () => {
       {/* all list */}
       <div className="order-3 md:order-2">
         <ul
-          className={`${
-            !isOpen ? "hidden" : "flex"
-          } md:flex md:flex-row flex-col mt-5 md:m-0 justify-start gap-5 md:gap-2`}
+          className={`${!isOpen ? "hidden" : "flex"
+            } md:flex md:flex-row flex-col mt-5 md:m-0 justify-start gap-5`}
         >
           <li>
             <Link className="flex gap-2 items-center" href={"/"}>
-              <span>
+              <span className="md:hidden">
                 <BiHomeAlt />
               </span>
               Home
@@ -42,7 +41,7 @@ const Header = () => {
           </li>
           <li>
             <Link className="flex gap-2 items-center" href={"/tools"}>
-              <span>
+              <span className="md:hidden">
                 <BiCog />
               </span>
               Tools
@@ -50,7 +49,7 @@ const Header = () => {
           </li>
           <li>
             <Link className="flex gap-2 items-center" href={"/about"}>
-              <span>
+              <span className="md:hidden">
                 <BiHomeAlt />
               </span>
               About
@@ -58,7 +57,7 @@ const Header = () => {
           </li>
           <li>
             <Link className="flex gap-2 items-center" href={"/contact"}>
-              <span>
+              <span className="md:hidden">
                 <BiHomeAlt />
               </span>
               Contact
