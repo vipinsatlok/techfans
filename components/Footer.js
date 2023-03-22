@@ -7,17 +7,29 @@ const Footer = () => {
       {/* social site links */}
       <div className="flex items-center text-gray-400 gap-4 mt-5 md:m-0">
         <span>
-          <a className="hover:text-gray-300  cursor-pointer">
+          <a
+            target="_blank"
+            href="https://twitter.com/vipinsatlok"
+            className="hover:text-gray-300  cursor-pointer"
+          >
             <FaTwitter />
           </a>
         </span>
         <span>
-          <a className="hover:text-gray-300  cursor-pointer">
+          <a
+            href="https://facebook.com/vipinsatlok"
+            target="_blank"
+            className="hover:text-gray-300  cursor-pointer"
+          >
             <FaFacebookF />
           </a>
         </span>
         <span>
-          <a className="hover:text-gray-300  cursor-pointer">
+          <a
+            target="_blank"
+            href="https://instagram.com/vipinsatlok"
+            className="hover:text-gray-300  cursor-pointer"
+          >
             <FaInstagram />
           </a>
         </span>

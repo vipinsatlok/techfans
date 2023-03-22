@@ -36,11 +36,7 @@ const Home = ({ toolsData, sidebarData }) => {
   const title = query?.category ? String(query?.category) + " Tools" : "Tools";
 
   return (
-    <LayoutTools
-      title={title}
-      description="This is Tools Description"
-      sidebarData={sidebarData}
-    >
+    <LayoutTools title={title} sidebarData={sidebarData}>
       <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
         {finalData?.map((item, i) => {
           return <Card {...item} key={i} />;
