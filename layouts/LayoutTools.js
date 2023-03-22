@@ -49,8 +49,8 @@ const LayoutTools = ({ children, sidebarData, title, description }) => {
             <h1 className="text-gray-100 capitalize font-medium text-4xl">
               {title || "Title"}
             </h1>
-            <p className="text-gray-300 font-medium text-sm">
-              {description || "This is description"}
+            <p className="text-gray-300 font-medium text-xs">
+              {description && description}
             </p>
           </div>
           {!router.query.tool && (

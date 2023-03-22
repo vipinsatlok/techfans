@@ -3,36 +3,27 @@ import CountBox from "@/components/CountBox";
 import Input from "@/components/Input";
 import TextArea from "@/components/TextArea";
 import { useState } from "react";
+import { getWordCounts } from "./logics";
 
-const LetterCounter = () => {
+const WordCounter = () => {
   const [totalCount, setTotalCount] = useState(0);
   const [text, setText] = useState("");
   const [searchText, setSearchText] = useState("");
   const [isCheck, setIsCheck] = useState(false);
 
   const textCount = (value) => {
-    count(value, searchText, isCheck);
     setText(value);
+    setTotalCount(getWordCounts(value, searchText, isCheck));
   };
 
   const check = (value) => {
-    count(text, searchText, value);
+    setTotalCount(getWordCounts(text, searchText, value));
     setIsCheck(value);
   };
 
   const searchTextCount = (value) => {
-    count(text, value, isCheck);
+    setTotalCount(getWordCounts(text, value, isCheck));
     setSearchText(value);
-  };
-
-  const count = (value, searchValue, check) => {
-    const regex = new RegExp(searchValue, `${check ? "" : "i"}g`);
-
-    if (searchValue) {
-      return setTotalCount(String(value)?.match(regex)?.length || 0);
-    } else {
-      return setTotalCount(value.length);
-    }
   };
 
   return (
@@ -40,9 +31,9 @@ const LetterCounter = () => {
       <TextArea onChange={textCount} placeholder={"Enter your text..."} />
       <Input onChange={searchTextCount} placeholder={"Enter search text..."} />
       <Check onChange={check} text={"Case Sensetive"} />
-      <CountBox num={totalCount} text={"Total letter is"} />
+      <CountBox num={totalCount} text={"Total word is"} />
     </div>
   );
 };
 
-export default LetterCounter;
+export default WordCounter;
