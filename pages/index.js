@@ -42,9 +42,9 @@ const Home = ({ toolsData, sidebarData }) => {
         })}
       </div>
       {!finalData.length && <NotFound />}
+      
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5828945217071181"
        crossorigin="anonymous"></script>
-  <!-- techfans-add -->
   <ins class="adsbygoogle"
        style="display:block"
        data-ad-client="ca-pub-5828945217071181"
@@ -54,6 +54,7 @@ const Home = ({ toolsData, sidebarData }) => {
   <script>
        (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
+       
     </LayoutTools>
   );
 };
