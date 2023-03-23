@@ -1,8 +1,10 @@
+import Ad from "@/components/Ad";
 import Card from "@/components/Card";
 import NotFound from "@/components/NotFound";
 import { sidebarData, toolsData } from "@/data/toolsData";
 import LayoutTools from "@/layouts/LayoutTools";
 import { useRouter } from "next/router";
+
 
 const Home = ({ toolsData, sidebarData }) => {
   const router = useRouter();
@@ -42,19 +44,7 @@ const Home = ({ toolsData, sidebarData }) => {
         })}
       </div>
       {!finalData.length && <NotFound />}
-      
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5828945217071181"
-       crossorigin="anonymous"></script>
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-5828945217071181"
-       data-ad-slot="8149088142"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-       
+      <Ad />
     </LayoutTools>
   );
 };

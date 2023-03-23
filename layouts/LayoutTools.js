@@ -16,7 +16,7 @@ const LayoutTools = ({ children, sidebarData, title, description }) => {
   return (
     <div className="flex w-full relative">
       {/* sidebar open hide button */}
-      <div className="">
+      <div>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden absolute top-1 right-1 rounded-full p-1 px-3 focus:bg-blue-700 text-white bg-blue-500"
